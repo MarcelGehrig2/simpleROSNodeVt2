@@ -1,6 +1,7 @@
 *build*
 *.txt.user
 *.swp
+*.kdev4
 
 
 # This file is used to ignore files which are generated
