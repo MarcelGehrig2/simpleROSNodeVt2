@@ -1,4 +1,5 @@
 #include <iostream>
+#include <chrono>
 
 //ROS stuff
 #include <ros/ros.h>
@@ -9,11 +10,42 @@
 #include <sensor_msgs/LaserScan.h>
 
 
-using namespace std;
+//using namespace std;
 
 int main(int argc, char *argv[])
 {
-	cout << "TEST: 'simpleROSNode' stated" << endl;
+	std::cout << "TEST: 'simpleROSNode' stated" << std::endl;
+
+	// Timing measurements
+	// ///////////////////
+	typedef std::chrono::steady_clock clock;
+	auto start = clock::now();
+	auto stop = clock::now();
+	std::chrono::duration<int, std::nano> duration;
+	int i;
+	i = 0;
+	start = clock::now();
+		// offset timing measurement
+	stop = clock::now();
+	duration = (stop - start) / 1;	//nsec allways int
+	std::cout << "Itterations: " << i << " Duration per itteration: " << duration.count() << " nanosec" << std::endl;
+
+	i = 0;
+	start = clock::now();
+		// offset timing measurement
+	stop = clock::now();
+	duration = (stop - start) / 1;	//nsec allways int
+	std::cout << "Itterations: " << i << " Duration per itteration: " << duration.count() << " nanosec" << std::endl;
+
+
+	// Ros console (logging)
+	// /////////////////////
+
+#include "measurementsRosInfoStream.hpp"
+#include "measurementsRosInfo.hpp"
+
+
+
 
 
 	ros::init(argc, argv, "testNode");
@@ -22,7 +54,7 @@ int main(int argc, char *argv[])
 	ros::Publisher chatter_topic1 = n.advertise<std_msgs::Float64>("testNode/TestTopic1", 1000);
 	ros::Publisher chatter_topic2 = n.advertise<sensor_msgs::Joy>("testNode/TestTopic2", 1000);
 	ros::Publisher chatter_topic3 = n.advertise<sensor_msgs::LaserScan>("testNode/TestTopic3", 1000);
-	ros::Rate loop_rate(5);	// 10Hz
+	ros::Rate loop_rate(8);	// 10Hz
 
 
 	double count = 0;
@@ -53,6 +85,7 @@ int main(int argc, char *argv[])
 
 
 		chatter_topic1.publish(msg1);
+		ROS_INFO_STREAM("Testnode msg1: '" << msg1.data);
 		chatter_topic2.publish(msg2);
 		chatter_topic3.publish(msg3);
 
@@ -62,6 +95,6 @@ int main(int argc, char *argv[])
 		count++;
 	}
 
-	cout << "TEST: 'simpleROSNode' finished" << endl;
+	std::cout << "TEST: 'simpleROSNode' finished" << std::endl;
 	return 0;
 }
