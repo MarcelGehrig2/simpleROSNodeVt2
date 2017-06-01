@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	ros::Publisher chatter_topic1 = n.advertise<std_msgs::Float64>("testNode/TestTopic1", 1000);
 	ros::Publisher chatter_topic2 = n.advertise<sensor_msgs::Joy>("testNode/TestTopic2", 1000);
 	ros::Publisher chatter_topic3 = n.advertise<sensor_msgs::LaserScan>("testNode/TestTopic3", 1000);
-	ros::Rate loop_rate(10);	// 10Hz
+	ros::Rate loop_rate(5);	// 10Hz
 
 
 	double count = 0;
@@ -32,7 +32,8 @@ int main(int argc, char *argv[])
 		sensor_msgs::Joy msg2;
 		sensor_msgs::LaserScan msg3;
 
-		msg1.data = static_cast<double>( count/3 );
+//		msg1.data = static_cast<double>( count/3 );
+		msg1.data = static_cast<double>( count );
 
 		msg2.header.stamp = ros::Time::now();
 		sensor_msgs::Joy::_axes_type axes {count/10, (count+1)/10, (count+2)/10};
@@ -58,7 +59,7 @@ int main(int argc, char *argv[])
 		ros::spinOnce();
 
 		loop_rate.sleep();
-		++count;
+		count++;
 	}
 
 	cout << "TEST: 'simpleROSNode' finished" << endl;
