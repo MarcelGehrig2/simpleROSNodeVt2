@@ -1,0 +1,96 @@
+TEST: 'simpleROSNode' stated
+Itterations: 0 Duration per itteration: 38 nanosec
+Itterations: 0 Duration per itteration: 45 nanosec
+[ INFO] [1496835394.692850010]: ROS_INFO_STREAM 0
+Itterations: 1 Duration per itteration: 89 usec
+[ INFO] [1496835394.692899665]: ROS_INFO_STREAM 0
+Itterations: 1 Duration per itteration: 17 usec
+[ INFO] [1496835394.692920106]: ROS_INFO_STREAM 0
+[ INFO] [1496835394.692952733]: ROS_INFO_STREAM 1
+[ INFO] [1496835394.692967097]: ROS_INFO_STREAM 2
+[ INFO] [1496835394.692999755]: ROS_INFO_STREAM 3
+[ INFO] [1496835394.693014209]: ROS_INFO_STREAM 4
+[ INFO] [1496835394.693028072]: ROS_INFO_STREAM 5
+[ INFO] [1496835394.693042178]: ROS_INFO_STREAM 6
+[ INFO] [1496835394.693055881]: ROS_INFO_STREAM 7
+[ INFO] [1496835394.693069636]: ROS_INFO_STREAM 8
+[ INFO] [1496835394.693083132]: ROS_INFO_STREAM 9
+Itterations: 10 Duration per itteration: 17 usec
+[ INFO] [1496835394.693101502]: ROS_INFO_STREAM 0
+After 0sec sleep. Duration for one itteration: 14 usec
+[ INFO] [1496835394.693119174]: ROS_INFO_STREAM 0
+After 0sec sleep. Duration for one itteration: 13 usec
+[ INFO] [1496835394.693137151]: ROS_INFO_STREAM 0
+After 0sec sleep. Duration for one itteration: 14 usec
+[ INFO] [1496835395.693306970]: ROS_INFO_STREAM 0
+After 1sec sleep. Duration for one itteration: 62 usec
+[ INFO] [1496835396.693516539]: ROS_INFO_STREAM 0
+After 1sec sleep. Duration for one itteration: 63 usec
+[ INFO] [1496835397.693635484]: ROS_INFO_STREAM 0
+After 1sec sleep. Duration for one itteration: 55 usec
+[ INFO] [1496835398.693784894]: ROS_INFO_STREAM 0
+After 1sec sleep. Duration for one itteration: 54 usec
+[ INFO] [1496835399.693938406]: ROS_INFO_STREAM 0
+After 1sec sleep. Duration for one itteration: 56 usec
+
+[ INFO] [1496835400.694098587]: ROS_INFO 
+Itterations: 1 Duration per itteration: 48 usec
+[ INFO] [1496835400.694118573]: ROS_INFO 
+Itterations: 1 Duration per itteration: 8 usec
+[ INFO] [1496835400.694127524]: ROS_INFO 
+[ INFO] [1496835400.694134254]: ROS_INFO 
+[ INFO] [1496835400.694140485]: ROS_INFO 
+[ INFO] [1496835400.694146683]: ROS_INFO 
+[ INFO] [1496835400.694152700]: ROS_INFO 
+[ INFO] [1496835400.694158846]: ROS_INFO 
+[ INFO] [1496835400.694165146]: ROS_INFO 
+[ INFO] [1496835400.694171234]: ROS_INFO 
+[ INFO] [1496835400.694177241]: ROS_INFO 
+[ INFO] [1496835400.694183314]: ROS_INFO 
+Itterations: 10 Duration per itteration: 6 usec
+[ INFO] [1496835400.694192157]: ROS_INFO 
+After 0sec sleep. Duration for one itteration: 7 usec
+[ INFO] [1496835400.694200137]: ROS_INFO 
+After 0sec sleep. Duration for one itteration: 6 usec
+[ INFO] [1496835400.694208712]: ROS_INFO 
+After 0sec sleep. Duration for one itteration: 6 usec
+[ INFO] [1496835401.694366024]: ROS_INFO 
+After 1sec sleep. Duration for one itteration: 54 usec
+[ INFO] [1496835402.694544671]: ROS_INFO 
+After 1sec sleep. Duration for one itteration: 57 usec
+[ INFO] [1496835403.694728191]: ROS_INFO 
+After 1sec sleep. Duration for one itteration: 56 usec
+[ INFO] [1496835404.694909044]: ROS_INFO 
+After 1sec sleep. Duration for one itteration: 56 usec
+[ INFO] [1496835405.695131669]: ROS_INFO 
+After 1sec sleep. Duration for one itteration: 58 usec
+
+[ INFO] [1496835406.700621670]: Testnode msg1: '0
+[ INFO] [1496835406.825724026]: Testnode msg1: '1
+[ INFO] [1496835406.950727121]: Testnode msg1: '2
+[ INFO] [1496835407.075737811]: Testnode msg1: '3
+[ INFO] [1496835407.200761204]: Testnode msg1: '4
+[ INFO] [1496835407.325697531]: Testnode msg1: '5
+[ INFO] [1496835407.450701369]: Testnode msg1: '6
+[ INFO] [1496835407.575698185]: Testnode msg1: '7
+[ INFO] [1496835407.700760493]: Testnode msg1: '8
+[ INFO] [1496835407.825723218]: Testnode msg1: '9
+[ INFO] [1496835407.950762871]: Testnode msg1: '10
+[ INFO] [1496835408.075760510]: Testnode msg1: '11
+[ INFO] [1496835408.200761261]: Testnode msg1: '12
+[ INFO] [1496835408.325732647]: Testnode msg1: '13
+[ INFO] [1496835408.450731332]: Testnode msg1: '14
+[ INFO] [1496835408.575766020]: Testnode msg1: '15
+[ INFO] [1496835408.700761781]: Testnode msg1: '16
+[ INFO] [1496835408.825713551]: Testnode msg1: '17
+[ INFO] [1496835408.950760466]: Testnode msg1: '18
+[ INFO] [1496835409.075740171]: Testnode msg1: '19
+[ INFO] [1496835409.200762413]: Testnode msg1: '20
+[ INFO] [1496835409.325724197]: Testnode msg1: '21
+[ INFO] [1496835409.450739884]: Testnode msg1: '22
+[ INFO] [1496835409.575758682]: Testnode msg1: '23
+[ INFO] [1496835409.700766061]: Testnode msg1: '24
+[ INFO] [1496835409.825728560]: Testnode msg1: '25
+[ INFO] [1496835409.950767159]: Testnode msg1: '26
+^CTEST: 'simpleROSNode' finished
+
