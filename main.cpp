@@ -2,11 +2,10 @@
 
 //ROS stuff
 #include <ros/ros.h>
-//#include <ros/console.h>
-//#include <std_msgs/String.h>
 #include <std_msgs/Float64.h>
 #include <sensor_msgs/Joy.h>
 #include <sensor_msgs/LaserScan.h>
+#include <sensor_msgs/BatteryState.h>
 
 
 using namespace std;
@@ -22,18 +21,20 @@ int main(int argc, char *argv[])
 	ros::Publisher chatter_topic1 = n.advertise<std_msgs::Float64>("testNode/TestTopic1", 1000);
 	ros::Publisher chatter_topic2 = n.advertise<sensor_msgs::Joy>("testNode/TestTopic2", 1000);
 	ros::Publisher chatter_topic3 = n.advertise<sensor_msgs::LaserScan>("testNode/TestTopic3", 1000);
-	ros::Rate loop_rate(5);	// 10Hz
+	ros::Publisher chatter_topic4 = n.advertise<sensor_msgs::BatteryState>("testNode/TestTopic4", 1000);
+	ros::Rate loop_rate(5);	// 5Hz
 
 
+	cout << "TEST: 'simpleROSNode' initialized" << endl;
 	double count = 0;
 	while (ros::ok())
 	{
 		std_msgs::Float64 msg1;
 		sensor_msgs::Joy msg2;
 		sensor_msgs::LaserScan msg3;
+		sensor_msgs::BatteryState msg4;
 
-//		msg1.data = static_cast<double>( count/3 );
-		msg1.data = static_cast<double>( count );
+		msg1.data = static_cast<double>( static_cast<int>(count)%10 );
 
 		msg2.header.stamp = ros::Time::now();
 		sensor_msgs::Joy::_axes_type axes {count/10, (count+1)/10, (count+2)/10};
@@ -51,10 +52,15 @@ int main(int argc, char *argv[])
 		msg3.ranges = axes;
 		msg3.intensities = axes;
 
+		msg4.header.stamp = ros::Time::now();
+		msg4.present = static_cast<bool>( static_cast<int>(count)%3 );
+
+
 
 		chatter_topic1.publish(msg1);
 		chatter_topic2.publish(msg2);
 		chatter_topic3.publish(msg3);
+		chatter_topic4.publish(msg4);
 
 		ros::spinOnce();
 
