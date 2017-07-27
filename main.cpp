@@ -15,13 +15,13 @@ int main(int argc, char *argv[])
 	cout << "TEST: 'simpleROSNode' stated" << endl;
 
 
-	ros::init(argc, argv, "testNode");
+	ros::init(argc, argv, "rosNodeTalker");
 	ros::NodeHandle n;
 
-	ros::Publisher chatter_topic1 = n.advertise<std_msgs::Float64>("testNode/TestTopic1", 1000);
-	ros::Publisher chatter_topic2 = n.advertise<sensor_msgs::Joy>("testNode/TestTopic2", 1000);
-	ros::Publisher chatter_topic3 = n.advertise<sensor_msgs::LaserScan>("testNode/TestTopic3", 1000);
-	ros::Publisher chatter_topic4 = n.advertise<sensor_msgs::BatteryState>("testNode/TestTopic4", 1000);
+	ros::Publisher chatter_topic1 = n.advertise<std_msgs::Float64>("rosNodeTalker/TestTopic1", 1000);
+	ros::Publisher chatter_topic2 = n.advertise<sensor_msgs::Joy>("rosNodeTalker/TestTopic2", 1000);
+	ros::Publisher chatter_topic3 = n.advertise<sensor_msgs::LaserScan>("rosNodeTalker/TestTopic3", 1000);
+	ros::Publisher chatter_topic4 = n.advertise<sensor_msgs::BatteryState>("rosNodeTalker/TestTopic4", 1000);
 	ros::Rate loop_rate(5);	// 5Hz
 
 
@@ -61,6 +61,8 @@ int main(int argc, char *argv[])
 		chatter_topic2.publish(msg2);
 		chatter_topic3.publish(msg3);
 		chatter_topic4.publish(msg4);
+		
+		std::cout << count+1 << ". message sent" << std::endl;
 
 		ros::spinOnce();
 
