@@ -44,7 +44,6 @@ int main(int argc, char *argv[])
 		sensor_msgs::BatteryState msg4;
 
 		msg1.data = static_cast<double>( static_cast<int>(count)%1000 -450 );
-// 		msg1.data = static_cast<double>( 0.0/0.0 );		//publishes NaN
 
 		msg2.header.stamp = ros::Time::now();
 		sensor_msgs::Joy::_axes_type axes {count/10, (count+1)/10, (count+2)/10};
